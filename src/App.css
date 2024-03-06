@@ -1,38 +1,283 @@
-.App {
-  text-align: center;
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(217, 213, 213, 0.533);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+container{
+    width: 902px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 5px 0px 14px 1px #000;
+    position: relative;
+}
+.midblock{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header{
+    background: url(./assets/headerbackground.jpg) no-repeat center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    height: 170px;
+    position: relative;
+}
+.logoImage{
+    width: 100%;
+}
+.navBar{
+    margin-left: 20px;
+    margin-bottom: 6px;
+    display: flex;
+    
+}
+.min-navBar{
+    margin-left: 20px;
+    margin-bottom: 6px;
+    display: none;
+    flex-direction: column;
+    margin-top: 25px;
+    position: absolute;
+    top: 146px;
+    left: -7px;
+    background-color: #cecece;
+    box-shadow: 1px 1px 1px 1px  #000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.naveItem{
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    border-radius: 5px;
+}
+.naveItem:hover{
+    background-color: rgb(100, 115, 178);
+    text-shadow: 2px 2px 2px #fff;
+}
+.activeNaveItem{
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+    font-size: 14px;
+    color: #000;
+    background-color: rgb(100, 115, 178);
+    border-radius: 5px;
+    font-weight: 700;
+    box-shadow: 1px 1px 1px 1px  #000;
+    text-shadow: 2px 2px 2px #fff;
+}
+.burgerMenu{
+    font-size: 20px;
+    padding: 8px;
+    display: none;
+    position: absolute;
+    left: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.logoWraper{
+    width: 170px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main{
+    width: 65%;
+    padding: 20px;
+}
+.homeArticleWraper{
+    display: flex;
+    flex-direction: column;
+}
+.introduction, .oilAndGas, .contactUs{
+    border: 5px double #666;
+    padding: 5px;
+    border-radius: 25px;
+    margin: 25px auto;
+}
+
+.introduction span, .oilAndGas span,
+.profileIntro span, .profileHistory span, 
+.profileOffice span, .projects span,
+.factory span, .showRoom span, .contactUs span{
+    font-size: 25px;
+    font-weight: 700;
+    color: #650404;
+    padding: 20px;
+}
+
+li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.contactUs li{
+    list-style: none;
+}
+
+.introduction p, .oilAndGas p
+.profileIntro p, .profileHistory p, .profileOffice p{
+    margin: 10px 20px;
+}
+.introduction button, .oilAndGas button{
+    margin: 5px;
+    background-color: #fff;
+    border: none;
+    color: #00f;
+    font-size: 16px;
+    cursor: pointer;
+}
+.officePix, .factoryPix, .showRoomPix{
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.officePix{
+    margin: 20px;
+}
+.factoryPix img , .showRoom img{
+    width: 100%;
+    border-radius: 25px;
+}
+.showRoom p{
+    margin: auto
+}
+table{
+    text-align: center;
+    margin: auto;
+    border-spacing: 35px 15px;
+}
+
+
+.partners{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: -15px 0px 55px 0px #888888d4;
+    padding: 10px;
+    background: #fff;
+}
+
+.pertnersTitle{
+    margin: 20px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-self: left;
+    align-items: center;
+    gap: 10px;
+    margin-left: 5px;
+}
+
+
+.imageContainers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    gap: 20px;
+}
+.imageContainers img{
+    width: 100%;
+}
+footer{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    bottom: 0;
+    height: 60px;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    padding-top: 20px;
+    box-shadow: 5px 0px 14px 1px #000;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 5px;
+}
+
+
+@media (min-width: 600px) and (max-width: 902px ){
+    container{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+        justify-content: space-between;
+        
+    }
+    .navBar{
+        flex-wrap: wrap;
+        width: 70%;
+    }
+    .naveItem{
+        background-color: rgba(246, 243, 243, 0.533);
+    }
+    
+}
+
+@media (max-width: 600px) {
+    container{
+       width:100%;
+    }
+    header{
+        width: 100%;
+    }
+    .navBar{
+        display: none;
+    }
+
+    .min-navBar{
+        display: none;
+        flex-direction: column;
+        margin-top: 25px;
+        position: absolute;
+        top: 146px;
+        left: -7px;
+        background-color: #cecece;
+        box-shadow: 1px 1px 1px 1px  #000;
+    }
+    .logoWraper{
+        position: absolute;
+        left: 50px;
+        top: 121px
+    }
+    .burgerMenu{
+        display: block;
+    }
+
+    .midblock{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+    main{
+        width: 90%;
+    }
+    .imageContainers img{
+        width: 60%;
+    }
+    .partners{
+        width: 70%;
+        box-shadow: none;
+        padding: 10px;
+        background: #fff;
+        border: 2px dotted;
+    }
+
 }
